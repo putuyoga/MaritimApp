@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15B75988-2DBA-44F8-84F7-3B994ED6546B}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaritimApp.WinPhone</RootNamespace>
+    <AssemblyName>MaritimApp.WinPhone</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PhoneApp1_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MaritimApp.WinPhone.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <NuGetPackageImportStamp>2ff96d47</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Libs\CustomButtonRenderer.cs" />
+    <Compile Include="Libs\CustomTabbedPageRenderer.cs" />
+    <Compile Include="Libs\ExtendedMapRenderer.cs" />
+    <Compile Include="Libs\PrefixName_WinPhone.cs" />
+    <Compile Include="Libs\Settings_WinPhone.cs" />
+    <Compile Include="Libs\ShowCaseMapRenderer.cs" />
+    <Compile Include="Libs\SQLite_WinPhone.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\GelombangIcons\Thumbs.db" />
+    <None Include="Assets\WindIcons\Thumbs.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AddButton.png" />
+    <Content Include="Assets\GelombangIcons\1.png" />
+    <Content Include="Assets\GelombangIcons\2.png" />
+    <Content Include="Assets\GelombangIcons\3.png" />
+    <Content Include="Assets\Pin.png" />
+    <Content Include="Assets\Question.png" />
+    <Content Include="Assets\WeatherIcons\day\113.png" />
+    <Content Include="Assets\WeatherIcons\day\116.png" />
+    <Content Include="Assets\WeatherIcons\day\119.png" />
+    <Content Include="Assets\WeatherIcons\day\122.png" />
+    <Content Include="Assets\WeatherIcons\day\143.png" />
+    <Content Include="Assets\WeatherIcons\day\176.png" />
+    <Content Include="Assets\WeatherIcons\day\179.png" />
+    <Content Include="Assets\WeatherIcons\day\182.png" />
+    <Content Include="Assets\WeatherIcons\day\185.png" />
+    <Content Include="Assets\WeatherIcons\day\200.png" />
+    <Content Include="Assets\WeatherIcons\day\227.png" />
+    <Content Include="Assets\WeatherIcons\day\230.png" />
+    <Content Include="Assets\WeatherIcons\day\248.png" />
+    <Content Include="Assets\WeatherIcons\day\260.png" />
+    <Content Include="Assets\WeatherIcons\day\263.png" />
+    <Content Include="Assets\WeatherIcons\day\266.png" />
+    <Content Include="Assets\WeatherIcons\day\281.png" />
+    <Content Include="Assets\WeatherIcons\day\284.png" />
+    <Content Include="Assets\WeatherIcons\day\293.png" />
+    <Content Include="Assets\WeatherIcons\day\296.png" />
+    <Content Include="Assets\WeatherIcons\day\299.png" />
+    <Content Include="Assets\WeatherIcons\day\302.png" />
+    <Content Include="Assets\WeatherIcons\day\305.png" />
+    <Content Include="Assets\WeatherIcons\day\308.png" />
+    <Content Include="Assets\WeatherIcons\day\311.png" />
+    <Content Include="Assets\WeatherIcons\day\314.png" />
+    <Content Include="Assets\WeatherIcons\day\317.png" />
+    <Content Include="Assets\WeatherIcons\day\320.png" />
+    <Content Include="Assets\WeatherIcons\day\323.png" />
+    <Content Include="Assets\WeatherIcons\day\326.png" />
+    <Content Include="Assets\WeatherIcons\day\329.png" />
+    <Content Include="Assets\WeatherIcons\day\332.png" />
+    <Content Include="Assets\WeatherIcons\day\335.png" />
+    <Content Include="Assets\WeatherIcons\day\338.png" />
+    <Content Include="Assets\WeatherIcons\day\350.png" />
+    <Content Include="Assets\WeatherIcons\day\353.png" />
+    <Content Include="Assets\WeatherIcons\day\356.png" />
+    <Content Include="Assets\WeatherIcons\day\359.png" />
+    <Content Include="Assets\WeatherIcons\day\362.png" />
+    <Content Include="Assets\WeatherIcons\day\365.png" />
+    <Content Include="Assets\WeatherIcons\day\368.png" />
+    <Content Include="Assets\WeatherIcons\day\371.png" />
+    <Content Include="Assets\WeatherIcons\day\374.png" />
+    <Content Include="Assets\WeatherIcons\day\377.png" />
+    <Content Include="Assets\WeatherIcons\day\386.png" />
+    <Content Include="Assets\WeatherIcons\day\389.png" />
+    <Content Include="Assets\WeatherIcons\day\392.png" />
+    <Content Include="Assets\WeatherIcons\day\395.png" />
+    <Content Include="Assets\WeatherIcons\night\113.png" />
+    <Content Include="Assets\WeatherIcons\night\116.png" />
+    <Content Include="Assets\WeatherIcons\night\119.png" />
+    <Content Include="Assets\WeatherIcons\night\122.png" />
+    <Content Include="Assets\WeatherIcons\night\143.png" />
+    <Content Include="Assets\WeatherIcons\night\176.png" />
+    <Content Include="Assets\WeatherIcons\night\179.png" />
+    <Content Include="Assets\WeatherIcons\night\182.png" />
+    <Content Include="Assets\WeatherIcons\night\185.png" />
+    <Content Include="Assets\WeatherIcons\night\200.png" />
+    <Content Include="Assets\WeatherIcons\night\227.png" />
+    <Content Include="Assets\WeatherIcons\night\230.png" />
+    <Content Include="Assets\WeatherIcons\night\248.png" />
+    <Content Include="Assets\WeatherIcons\night\260.png" />
+    <Content Include="Assets\WeatherIcons\night\263.png" />
+    <Content Include="Assets\WeatherIcons\night\266.png" />
+    <Content Include="Assets\WeatherIcons\night\281.png" />
+    <Content Include="Assets\WeatherIcons\night\284.png" />
+    <Content Include="Assets\WeatherIcons\night\293.png" />
+    <Content Include="Assets\WeatherIcons\night\296.png" />
+    <Content Include="Assets\WeatherIcons\night\299.png" />
+    <Content Include="Assets\WeatherIcons\night\302.png" />
+    <Content Include="Assets\WeatherIcons\night\305.png" />
+    <Content Include="Assets\WeatherIcons\night\308.png" />
+    <Content Include="Assets\WeatherIcons\night\311.png" />
+    <Content Include="Assets\WeatherIcons\night\314.png" />
+    <Content Include="Assets\WeatherIcons\night\317.png" />
+    <Content Include="Assets\WeatherIcons\night\320.png" />
+    <Content Include="Assets\WeatherIcons\night\323.png" />
+    <Content Include="Assets\WeatherIcons\night\326.png" />
+    <Content Include="Assets\WeatherIcons\night\329.png" />
+    <Content Include="Assets\WeatherIcons\night\332.png" />
+    <Content Include="Assets\WeatherIcons\night\335.png" />
+    <Content Include="Assets\WeatherIcons\night\338.png" />
+    <Content Include="Assets\WeatherIcons\night\350.png" />
+    <Content Include="Assets\WeatherIcons\night\353.png" />
+    <Content Include="Assets\WeatherIcons\night\356.png" />
+    <Content Include="Assets\WeatherIcons\night\359.png" />
+    <Content Include="Assets\WeatherIcons\night\362.png" />
+    <Content Include="Assets\WeatherIcons\night\365.png" />
+    <Content Include="Assets\WeatherIcons\night\368.png" />
+    <Content Include="Assets\WeatherIcons\night\371.png" />
+    <Content Include="Assets\WeatherIcons\night\374.png" />
+    <Content Include="Assets\WeatherIcons\night\377.png" />
+    <Content Include="Assets\WeatherIcons\night\386.png" />
+    <Content Include="Assets\WeatherIcons\night\389.png" />
+    <Content Include="Assets\WeatherIcons\night\392.png" />
+    <Content Include="Assets\WindIcons\1.png" />
+    <Content Include="Assets\WindIcons\2.png" />
+    <Content Include="Assets\WindIcons\3.png" />
+    <Content Include="SplashScreenImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JeffWilcox.PhoneThemeManager, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PhoneThemeManager.2.1.2\lib\windowsphone8\JeffWilcox.PhoneThemeManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.4.2.6359\lib\WP80\Xamarin.Forms.Maps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.WP8, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.4.2.6359\lib\WP80\Xamarin.Forms.Maps.WP8.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WP8, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Platform.WP8.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaritimApp\MaritimApp.csproj">
+      <Project>{9803bd87-1725-47cf-8c54-51f2930cabec}</Project>
+      <Name>MaritimApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.WP80, Version=3.8.10.2">
+      <Name>SQLite for Windows Phone</Name>
+    </SDKReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\SQLitePCL.raw_basic.0.7.1\build\wp8\SQLitePCL.raw_basic.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SQLitePCL.raw_basic.0.7.1\build\wp8\SQLitePCL.raw_basic.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\SQLitePCL.raw_basic.0.7.1\build\wp8\SQLitePCL.raw_basic.targets" Condition="Exists('..\..\packages\SQLitePCL.raw_basic.0.7.1\build\wp8\SQLitePCL.raw_basic.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+</Project>

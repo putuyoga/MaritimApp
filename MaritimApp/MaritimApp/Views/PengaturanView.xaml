@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaritimApp.Views.PengaturanView"
+             xmlns:libs="clr-namespace:MaritimApp.Libs">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="showTitle"
+                x:TypeArguments="x:Boolean"
+                iOS="false"
+                Android="false"
+                WinPhone="true" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical">
+        <StackLayout IsVisible="{StaticResource showTitle}" Padding="24" BackgroundColor="#3c5e7b">
+            <Label VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="PENGATURAN" ForegroundColor="White" FontSize="36" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Padding="12">
+            <StackLayout Orientation="Horizontal" Padding="12,0">
+                <Label Text="Jarak Pandang Minimum: " />
+                <Label BindingContext="{x:Reference Name=jarakPandangSlider}"  Text="{Binding Value, StringFormat='{0} km'}" />
+            </StackLayout>
+            <libs:ExtendedSlider x:Name="jarakPandangSlider" StepValue="0.5"  Maximum="11" Minimum="5.5" HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Orientation="Horizontal" Padding="12,0">
+                <Label Text="Tinggi Gelombang Minimum: " />
+                <Label BindingContext="{x:Reference Name=tinggiGelSlider}"  Text="{Binding Value, StringFormat='{0} m'}" />
+            </StackLayout>
+            <libs:ExtendedSlider x:Name="tinggiGelSlider" StepValue="0.5" Maximum="4" Minimum="1" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" Padding="12,0">
+                <Label Text="Kondisi Cuaca Minimum: " />
+            </StackLayout>
+            <Picker x:Name="kondisiCuacaPicker" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Hujan Gerimis</x:String>
+                    <x:String>Cerah</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="simpanButton"  Text="Simpan" Clicked="Simpan_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

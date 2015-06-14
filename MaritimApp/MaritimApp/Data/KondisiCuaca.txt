@@ -1,0 +1,48 @@
+﻿395	Salju Sedang atau Berat dengan Guntur
+392	Salju Ringan Tidak Merata dengan Guntur
+389	Hujan Sedang atau Berat dengan Guntur
+386	Hujan Ringan Tidak Merata dengan Guntur
+377	Butiran Es Sedang atau Berat
+374	Butiran Es Ringan
+371	Salju Sedang atau Berat
+368	Salju Ringan
+365	Hujan ES Sedang atau Berat
+362	Hujan Es Ringan
+359	Hujan Lebat
+356	Hujan Sedang atau Berat
+353	Hujan Ringan
+350	Butiran Es
+338	Salju Berat
+335	Salju Berat Tidak Merata
+332	Salju Sedang
+329	Salju Sedang Tidak Merata
+326	Salju Ringan
+323	Salju Ringan Tidak Merata
+320	Hujan Es Sedang atau Berat
+317	Hujan Es Ringan
+314	Hujan Beku Sedang atau Berat
+311	Hujan Beku Ringan
+308	Hujan Berat
+305	Hujan Berat Pada Waktu
+302	Hujan Sedang
+299	Hujan Sedang Pada Waktu
+296	Hujan Ringan
+293	Hujan Ringan Tidak Merata
+284	Gerimis Beku Berat
+281	Gerimis Beku
+266	Gerimis Ringan
+263	Gerimis Ringan Tidak Merata
+260	Kabut Beku
+248	Kabut Tebal
+230	Badai Saljut
+227	Hembusan Salju
+200	Gemuruh Guntur Disekitar
+185	Gerimis Beku Tidak Merata Disekitar
+182	Hujan & Salju Tidak Merata Disekitar
+179	Salju Tidak Merata Disekitar
+176	Hujan Tidak Merata Disekitar
+143	Kabut Tipis?
+122	Mendung
+119	Berawan
+116	Sebagian Berawan
+113	Cerah

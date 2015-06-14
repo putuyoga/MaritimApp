@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Inherit from the light Material Theme -->
+    <style name="MaritimTheme" parent="android:Theme.Holo.Light">
+        <!-- Override the app bar color -->
+        <item name="android:actionBarStyle">@style/MaritimActionBarStyle</item>
+        <item name="android:colorPrimary">@color/main_color</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- Override the color of UI controls -->
+        <item name="android:colorAccent">@color/main_color</item>
+        <item name="android:actionBarStyle">@style/MaritimActionBarStyle</item>
+
+        <item name="android:actionBarWidgetTheme">@style/PopupMenuTextView</item>
+    </style>
+    <style name="MaritimActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/main_color</item>
+        <item name="android:titleTextStyle">@style/MaritimTitleTextStyle</item>
+    </style>
+
+    <style name="PopupMenuTextView" parent="@style/android:Theme.Holo.Light">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MaritimTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

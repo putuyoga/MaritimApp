@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">MARITIM</string>
+    <string name="TambahLokasiTitle">TAMBAH LOKASI</string>
+    <string name="InformasiTitle">INFORMASI</string>
+    <string name="PengaturanTitle">PENGATURAN</string>
+    <string name="TentangTitle">TENTANG</string>
+</resources>

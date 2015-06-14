@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Converters="clr-namespace:MaritimApp.Converters"
+            xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:libs="clr-namespace:MaritimApp.Libs"
+             x:Class="MaritimApp.Views.DetailPrakiraanCuacaView">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="titleDetail" TargetType="Label">
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="valueDetail" TargetType="Label">
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Converters:ArahAnginConverter x:Key="ArahAnginConverter" />
+            <Converters:ImageGelombangConverter x:Key="ImageGelombangConverter" />
+            <Converters:ImageAnginConverter x:Key="ImageAnginConverter" />
+            <Converters:ImageCuacaConverter x:Key="ImageCuacaConverter" />
+            <Converters:KondisiCuacaConverter x:Key="KondisiCuacaConverter" />
+            <Converters:TimeConverter x:Key="TimeConverter" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <TabbedPage.Children>
+        <ContentPage Title="detail cuaca">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Vertical" Padding="12,6" Grid.Row="0">
+                    <!-- Infographic -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Vertical" Grid.Column="0">
+                            <Grid BackgroundColor="#ececec">
+                                <Grid.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="80" Android="60" />
+                                </Grid.HeightRequest>
+                                <Image Aspect="AspectFill"  Source="{Binding Converter={StaticResource ImageCuacaConverter}}" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Grid>
+                            <Label Text="{Binding KodeCuaca, Converter={StaticResource KondisiCuacaConverter}}">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Column="1">
+                            <Grid BackgroundColor="#ececec">
+                                <Grid.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="80" Android="60" />
+                                </Grid.HeightRequest>
+                                <Image Aspect="AspectFill" Source="{Binding TinggiGelombang, Converter={StaticResource ImageGelombangConverter}}" HorizontalOptions="Center" VerticalOptions="Center"  />
+                            </Grid>
+                            <Label Text="{Binding TinggiGelombang, StringFormat='{0:F1} meter'}">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Column="2">
+                            <Grid BackgroundColor="#ececec">
+                                <Grid.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="80" Android="60" />
+                                </Grid.HeightRequest>
+                                <Image Aspect="AspectFill" Source="{Binding KecepatanAngin, Converter={StaticResource ImageAnginConverter}}" HorizontalOptions="Center" VerticalOptions="Center"  />
+                            </Grid>
+                            <Label Text="{Binding KecepatanAngin, StringFormat='{0} km/jam'}">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+
+                    <!-- Info -->
+                    <StackLayout Orientation="Horizontal" Padding="0,24">
+                        <StackLayout.Padding>
+                            <OnPlatform x:TypeArguments="Thickness" WinPhone="0,24" Android="0,12" />
+                        </StackLayout.Padding>
+                        <Label x:Name="namaLokasi"  Text="{Binding Nama}">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                            </Label.FontSize>
+                        </Label>
+                        <Label Text="{Binding Waktu, Converter={StaticResource TimeConverter}}" FontAttributes="Bold">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <!-- Detail -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                            <Label Text="Tinggi Gelombang Maks" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding TinggiGelombangMaks, StringFormat='{0:F1} meter'}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+                            <Label Text="Arah Gelombang" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding ArahGelombang, StringFormat='{0}°'}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+                            <Label Text="Arah Angin" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding ArahAngin, Converter={StaticResource ArahAnginConverter}}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                            <Label Text="Jarak Pandang" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding JarakPandang, StringFormat='{0} km'}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                            <Label Text="Temperatur Air" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding TemperaturAir, StringFormat='{0} °C'}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                            <Label Text="Kelembapan" Style="{StaticResource titleDetail}" />
+                            <Label Text="{Binding Kelembapan, StringFormat='{0} %'}" Style="{StaticResource valueDetail}"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand">
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness" WinPhone="0" Android="12,3" />
+                    </StackLayout.Padding>
+                    <Grid VerticalOptions="EndAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Text="Sebelumnya" Grid.Column="0"  Clicked="Up_Clicked"/>
+                        <Button Text="Selanjutnya" Grid.Column="1" Clicked="Down_Clicked"/>
+                    </Grid>
+                </StackLayout>
+                <ActivityIndicator x:Name="loadingIndicator" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#BBFFFFFF" />
+            </Grid>
+        </ContentPage>
+        <ContentPage Title="lokasi peta">
+            <StackLayout Orientation="Vertical" Padding="12,-18,12,24">
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" WinPhone="12,-18,12,24" Android="18,12,18,12" />
+                </StackLayout.Padding>
+                <Grid x:Name="PetaLokasiGrid" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding Latitude, StringFormat='Latitude : {0}'}" Grid.Row="0"/>
+                <Label Text="{Binding Longitude, StringFormat='Longitude : {0}'}" Grid.Row="1"/>
+                <libs:ShowCaseMap Grid.Row="2"  x:Name="MainMap" BackgroundColor="Gray" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            </Grid>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

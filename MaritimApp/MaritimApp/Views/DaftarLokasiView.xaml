@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaritimApp.Views.DaftarLokasiView"
+             xmlns:Converters="clr-namespace:MaritimApp.Converters"
+             xmlns:Commands="clr-namespace:MaritimApp.Commands">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="showTitle"
+                x:TypeArguments="x:Boolean"
+                iOS="false"
+                Android="false"
+                WinPhone="true" />
+            <Commands:HapusLokasiCommand x:Key="HapusLokasiCommand" />
+            <Converters:KondisiCuacaFeaturedConverter x:Key="KondisiCuacaFeaturedConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout IsVisible="{StaticResource showTitle}" Padding="24" BackgroundColor="#3c5e7b">
+            <Label VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="MARITIM" ForegroundColor="White" FontSize="36" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="24,0" Android="18,0"/>
+            </StackLayout.Padding>
+            <ListView x:Name="LokasiListView" HasUnevenRows="true" ItemsSource="{Binding ListLokasi}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Hapus" Command="{StaticResource HapusLokasiCommand}" CommandParameter="{Binding}"/>
+                            </ViewCell.ContextActions>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" Padding="0,6">
+                                    <Grid WidthRequest="120" BackgroundColor="#ececec">
+                                        <Grid.WidthRequest>
+                                            <OnPlatform x:TypeArguments="x:Double" WinPhone="120" Android="80"/>
+                                        </Grid.WidthRequest>
+                                        <Image Aspect="AspectFill" Source="{Binding Converter={StaticResource KondisiCuacaFeaturedConverter}}" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Grid>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Nama}" FontAttributes="Bold">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label Text="{Binding Latitude, StringFormat='Latitude : {0}'}" />
+                                        <Label Text="{Binding Longitude, StringFormat='Longitude : {0}'}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Lokasi" Order="Primary" Priority="0" Clicked="TambahLokasiMenu_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+	                  WinPhone="Assets/AddButton.png"
+	                  Android="AddButton.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Name="Pengaturan" Order="Secondary" Priority="0" Clicked="PengaturanMenu_Clicked" />
+        <ToolbarItem Name="Tentang" Order="Secondary" Priority="0" Clicked="TentangMenu_Clicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>
