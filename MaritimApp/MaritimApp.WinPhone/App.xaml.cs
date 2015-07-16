@@ -1,4 +1,4 @@
-﻿#define DEBUG_AGENT
+﻿//#define DEBUG_AGENT
 using System;
 using System.Diagnostics;
 using System.Resources;
@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using MaritimApp.WinPhone.Resources;
 using System.Windows.Media;
 using Microsoft.Phone.Scheduler;
+using Microsoft.Phone.Notification;
 
 namespace MaritimApp.WinPhone
 {
@@ -26,8 +27,6 @@ namespace MaritimApp.WinPhone
         /// </summary>
         public App()
         {
-
-
             // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
 
@@ -64,13 +63,14 @@ namespace MaritimApp.WinPhone
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+
         }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            string periodicTaskName = "BackgroundAgent";
+            string periodicTaskName = "BackgroundService";
             try
             {
                 var periodicTask = ScheduledActionService.Find(periodicTaskName) as PeriodicTask;
@@ -90,7 +90,7 @@ namespace MaritimApp.WinPhone
 
                 // If debugging is enabled, use LaunchForTest to launch the agent in one minute.
 #if(DEBUG_AGENT)
-                    ScheduledActionService.LaunchForTest(periodicTaskName, TimeSpan.FromSeconds(60));
+                    ScheduledActionService.LaunchForTest(periodicTaskName, TimeSpan.FromSeconds(600));
 #endif
             }
             catch (InvalidOperationException exception)

@@ -13,7 +13,7 @@ namespace MaritimApp.Views
 		public DaftarLokasiView ()
 		{
 			InitializeComponent ();
-            Title = "MARITIM";
+            Title = "CUACA MARITIM";
             this.BindingContext = App.LokasiVM;
             LokasiListView.ItemTapped += LokasiListView_ItemTapped;
 		}
@@ -21,7 +21,7 @@ namespace MaritimApp.Views
         void LokasiListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var lokasi = (Lokasi)e.Item;
-
+            LokasiListView.SelectedItem = null;
             Navigation.PushAsync(new DetailPrakiraanCuacaView(lokasi));
         }
 
@@ -39,8 +39,8 @@ namespace MaritimApp.Views
 
         void TentangMenu_Clicked(object sender, EventArgs e)
         {
-            //var nextView = new TentangView();
-            //Navigation.PushAsync(nextView);
+            var nextView = new TentangView();
+            Navigation.PushAsync(nextView);
         }
 	}
 }

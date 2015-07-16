@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿//#define DEBUG_AGENT
+using System.Diagnostics;
 using System.Windows;
 using Microsoft.Phone.Scheduler;
 using Microsoft.Phone.Shell;
@@ -10,19 +11,21 @@ using System.Globalization;
 
 namespace BackgroundServiceWP
 {
-    public class BackgroundAgent : ScheduledTaskAgent
+    public class BackgroundService : ScheduledTaskAgent
     {
         /// <remarks>
         /// ScheduledAgent constructor, initializes the UnhandledException handler
         /// </remarks>
-        static BackgroundAgent()
+        static BackgroundService()
         {
             // Subscribe to the managed exception handler
             Deployment.Current.Dispatcher.BeginInvoke(delegate
             {
                 Application.Current.UnhandledException += UnhandledException;
             });
+
         }
+
 
         /// Code to execute on Unhandled Exceptions
         private static void UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
@@ -45,8 +48,6 @@ namespace BackgroundServiceWP
         /// </remarks>
         protected override void OnInvoke(ScheduledTask task)
         {
-            //TODO: Add code to perform your task in background
-
             Request();
             
         }
@@ -73,16 +74,16 @@ namespace BackgroundServiceWP
             float tinggiGelombangMin = settingTinggiGelombang == 0 ? 2 : settingTinggiGelombang;
             int kondisiCuacaMin = settingKondisiCuaca;
 
-            //Set credential api key World Weather Online
-            string apiKey = "adde5021bf1d5fe6ce0d42465c554";
-            WorldWeatherOnlineClient client = new WorldWeatherOnlineClient(apiKey);
-
             //Ambil lokasi dari database dulu
             LokasiViewModel lokasiVM = new LokasiViewModel();
             lokasiVM.GetListLokasi();
 
             if(lokasiVM.ListLokasi.Count > 0)
             {
+                //Set credential api key World Weather Online
+                string apiKey = "e722f3c6f836c840657708c1972ab";
+                WorldWeatherOnlineClient client = new WorldWeatherOnlineClient(apiKey);
+
                 foreach(var lokasi in lokasiVM.ListLokasi)
                 {
                     WorldWeatherOnlineAPI.Requests.MarineWeatherRequest request = new WorldWeatherOnlineAPI.Requests.MarineWeatherRequest();
@@ -92,7 +93,10 @@ namespace BackgroundServiceWP
                         Longitude = lokasi.Longitude
                     };
                     var response = await client.RequestAsync(request);
-                    
+
+                    //kalau ga ada respon (internet dll) - skip
+                    if (response == null) continue;
+
                     foreach(var weather in response.Data.Weather[0].Hourly)
                     {
                         //check waktu, jika sudah lewat, skip
@@ -105,6 +109,7 @@ namespace BackgroundServiceWP
                         if (praTinggiGel > tinggiGelombangMin || praTinggiGelMaks > tinggiGelombangMin)
                         {
                             Notify(lokasi.Nama, "gelombang @" + waktu + ":00 =" + praTinggiGelMaks + "m", lokasi.ID, waktu / 3);
+                            break;
                         }
 
                         //cek jarak pandang
@@ -112,6 +117,7 @@ namespace BackgroundServiceWP
                         if(praJarakPandang < jarakPandangMin )
                         {
                             Notify(lokasi.Nama, "jarak pandang @" + waktu + ":00 = " + praJarakPandang + "km", lokasi.ID, waktu / 3);
+                            break;
                         }
 
                         //cek kondisi cuaca
@@ -119,14 +125,21 @@ namespace BackgroundServiceWP
                         if(kondisiCuacaMin == 0 && kodeCuaca > 176)
                         {
                             Notify(lokasi.Nama, "kondisi cuaca kurang baik @" + waktu + ":00", lokasi.ID, waktu / 3);
+                            break;
                         }
                         else if(kondisiCuacaMin == 1 && kodeCuaca != 113)
                         {
                             Notify(lokasi.Nama, "kondisi cuaca kurang baik @" + waktu + ":00", lokasi.ID, waktu / 3);
+                            break;
                         }
                     }
                 }
             }
+
+            // If debugging is enabled, use LaunchForTest to launch the agent in 3 minute.
+#if(DEBUG_AGENT)
+                    ScheduledActionService.LaunchForTest("BackgroundService", TimeSpan.FromSeconds(180));
+#endif
 
             NotifyComplete();
         }

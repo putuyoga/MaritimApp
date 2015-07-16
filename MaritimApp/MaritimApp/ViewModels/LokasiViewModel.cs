@@ -12,6 +12,14 @@ namespace MaritimApp.ViewModels
     {
 
         public ObservableCollection<Lokasi> ListLokasi { get; set; }
+        
+        public bool IsEmpty
+        {
+            get
+            {
+                return ListLokasi.Count == 0 ? true : false;
+            }
+        }
 
         public void TambahLokasi(Lokasi baru) {
             Database db = new Database();
@@ -19,6 +27,7 @@ namespace MaritimApp.ViewModels
 
             //insert to collection
             ListLokasi.Add(baru);
+            NotifyPropertyChanged("IsEmpty");
             
         }
 
@@ -33,12 +42,24 @@ namespace MaritimApp.ViewModels
         {
             ListLokasi.Remove(lokasi);
             Database db = new Database();
-            db.Delete<Lokasi>(lokasi);
+            db.Delete(lokasi);
 
-            //TODO: delete cuaca pisan
+            //Empty Database Cuaca
+            string emptySQL = String.Format("DELETE FROM Cuaca Where IDLokasi = '{0}'", lokasi.ID);
+            db.Query<Cuaca>(emptySQL);
+
+            NotifyPropertyChanged("IsEmpty");
         }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged(string name)
+        {
+            if(PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
     }
 }

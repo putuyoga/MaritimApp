@@ -6,13 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
-using Xamarin.Forms;
-
-[assembly: Dependency(typeof(SQLite_WinPhone))]
 
 namespace MaritimApp.WinPhone.Libs
 {
-    public class SQLite_WinPhone : MaritimApp.Libs.ISQLite
+    public class SQLite_WinPhone
     {
         public SQLite_WinPhone() { }
         public SQLite.SQLiteConnection GetConnection()

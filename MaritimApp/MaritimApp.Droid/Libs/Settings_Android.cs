@@ -34,6 +34,10 @@ namespace MaritimApp.Droid.Libs
                 {
                     value = sharedPreferences.GetString(key, String.Empty);
                 }
+                else if(typeof(T) == typeof(bool) || typeof(T) == typeof(System.Boolean))
+                {
+                    value = sharedPreferences.GetBoolean(key, false);
+                }
                 else
                 {
                     throw new Exception("Currenty not suported - " + typeof(T).ToString());
@@ -59,6 +63,10 @@ namespace MaritimApp.Droid.Libs
                     else if (typeof(T) == typeof(string))
                     {
                         sharedPreferencesEditor.PutString(key, Convert.ToString(value));
+                    }
+                    else if(typeof(T) == typeof(bool) || typeof(T) == typeof(System.Boolean))
+                    {
+                        sharedPreferencesEditor.PutBoolean(key, Convert.ToBoolean(value));
                     }
                     else
                     {

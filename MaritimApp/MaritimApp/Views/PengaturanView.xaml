@@ -26,23 +26,54 @@
         </StackLayout>
 
         <StackLayout Orientation="Vertical" Padding="12">
-            <StackLayout Orientation="Horizontal" Padding="12,0">
+            <StackLayout Orientation="Horizontal">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="12,0" Android="0" />
+              </StackLayout.Padding>
+              <StackLayout BackgroundColor="#ececec">
+                <StackLayout.Padding>
+                  <OnPlatform x:TypeArguments="Thickness" WinPhone="8" Android="6" />
+                </StackLayout.Padding>
+                <Label>
+                  <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" WinPhone="22" Android="14"/>
+                  </Label.FontSize>
+                  <Label.FormattedText>
+                    <FormattedString>
+                      <FormattedString.Spans>
+                        <Span Text="Nilai dibawah akan menjadi acuan untuk menampilkan notifikasi peringatan."/>
+                      </FormattedString.Spans>
+                    </FormattedString>
+                  </Label.FormattedText>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" WinPhone="12,0" Android="0" />
+              </StackLayout.Padding>
                 <Label Text="Jarak Pandang Minimum: " />
                 <Label BindingContext="{x:Reference Name=jarakPandangSlider}"  Text="{Binding Value, StringFormat='{0} km'}" />
             </StackLayout>
             <libs:ExtendedSlider x:Name="jarakPandangSlider" StepValue="0.5"  Maximum="11" Minimum="5.5" HorizontalOptions="FillAndExpand"/>
 
-            <StackLayout Orientation="Horizontal" Padding="12,0">
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.Padding>
+                  <OnPlatform x:TypeArguments="Thickness" WinPhone="12,0" Android="0" />
+                </StackLayout.Padding>
                 <Label Text="Tinggi Gelombang Minimum: " />
                 <Label BindingContext="{x:Reference Name=tinggiGelSlider}"  Text="{Binding Value, StringFormat='{0} m'}" />
             </StackLayout>
             <libs:ExtendedSlider x:Name="tinggiGelSlider" StepValue="0.5" Maximum="4" Minimum="1" HorizontalOptions="FillAndExpand"/>
-            <StackLayout Orientation="Horizontal" Padding="12,0">
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.Padding>
+                  <OnPlatform x:TypeArguments="Thickness" WinPhone="12,0" Android="0" />
+                </StackLayout.Padding>
                 <Label Text="Kondisi Cuaca Minimum: " />
             </StackLayout>
             <Picker x:Name="kondisiCuacaPicker" HorizontalOptions="FillAndExpand">
                 <Picker.Items>
-                    <x:String>Hujan Gerimis</x:String>
+                    <x:String>Hujan Ringan</x:String>
                     <x:String>Cerah</x:String>
                 </Picker.Items>
             </Picker>

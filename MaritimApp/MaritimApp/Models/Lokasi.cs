@@ -7,10 +7,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using WorldWeatherOnlineAPI;
 using System.Globalization;
+using System.ComponentModel;
 
 namespace MaritimApp.Models
 {
-    public class Lokasi
+    public class Lokasi : INotifyPropertyChanged
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
@@ -18,6 +19,12 @@ namespace MaritimApp.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public DateTime CuacaLastUpdate { get; set; }
+
+        /// <summary>
+        /// Property tambahan agar bisa notify self object
+        /// kalau dapat data prakiraan cuaca terbaru
+        /// </summary>
+        public Lokasi Self { get { return this; } }
 
         public async Task<List<Cuaca>> GetPrakiraanCuaca()
         {
@@ -77,8 +84,9 @@ namespace MaritimApp.Models
 
                 //Insert Fresh Data
                 db.Insert(NewListCuaca);
+
+                NotifyPropertyChanged("Self");
             }
-            //TODO: add logic code here
             return NewListCuaca;
         }
 
@@ -88,6 +96,16 @@ namespace MaritimApp.Models
             string sql = String.Format("SELECT * FROM Cuaca WHERE (julianday('now', 'localtime') - julianday(Waktu)) > 0 AND IDLokasi = '{0}' ORDER BY Waktu DESC LIMIT 1", ID);
             var result = db.Query<Cuaca>(sql).FirstOrDefault();
             return result;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }

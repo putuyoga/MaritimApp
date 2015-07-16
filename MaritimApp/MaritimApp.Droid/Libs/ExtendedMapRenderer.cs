@@ -15,6 +15,7 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using MaritimApp.Droid.Libs;
+using Android.Gms.Maps.Model;
 
 [assembly: ExportRenderer(typeof(MaritimApp.Libs.ExtendedMap), typeof(ExtendedMapRenderer))]
 
@@ -46,6 +47,17 @@ namespace MaritimApp.Droid.Libs
         private void googleMap_MapClick(object sender, GoogleMap.MapClickEventArgs e)
         {
             ((ExtendedMap)Element).OnTap(new Position(e.Point.Latitude, e.Point.Longitude));
+            MarkWithPin(e.Point);
+        }
+
+        protected void MarkWithPin(LatLng pos)
+        {
+            //add new map pushpin
+            _map.Clear();
+            var marker = new MarkerOptions();
+            marker.SetPosition(pos);
+            marker.InvokeIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.Pin));
+            _map.AddMarker(marker);
         }
     }
 }

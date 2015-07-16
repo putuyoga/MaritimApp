@@ -12,9 +12,13 @@ namespace MaritimApp.Converters
     {
         public static Dictionary<int, string> DictKondisiCuaca;
 
-        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public KondisiCuacaConverter()
         {
             LoadResource();
+        }
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
             int code = (int)value;
             string keterangan;
             DictKondisiCuaca.TryGetValue(code, out keterangan);
@@ -23,7 +27,7 @@ namespace MaritimApp.Converters
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            LoadResource();
+            //LoadResource();
             return value;
         }
 

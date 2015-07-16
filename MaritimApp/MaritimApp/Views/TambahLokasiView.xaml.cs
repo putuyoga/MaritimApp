@@ -13,6 +13,8 @@ namespace MaritimApp.Views
 {
 	public partial class TambahLokasiView : ContentPage
 	{
+        private Position LastPin;
+
 		public TambahLokasiView ()
 		{
 			InitializeComponent ();
@@ -33,19 +35,18 @@ namespace MaritimApp.Views
         {
             if(String.IsNullOrWhiteSpace(NamaEntry.Text))
             {
-                DisplayAlert("Peringatan", "Isian 'nama' harus diisi", "OK");
+                DisplayAlert("Belum lengkap", "Isian 'nama' harus diisi", "OK");
             }
-            else if (MainMap.Pins.Count == 0)
+            else if (LastPin.Latitude == 0 && LastPin.Longitude == 0)
             {
-                DisplayAlert("Peringatan", "Lokasi belum dipilih.", "OK");
+                DisplayAlert("Belum Lengkap", "Pilih lokasi di 'peta' dengan tap, terlebih dahulu.", "OK");
             }
             else
             {
-                Position pos = MainMap.Pins.First().Position;
                 Lokasi lokasi = new Lokasi() {
                     ID = 1,
-                    Latitude = pos.Latitude,
-                    Longitude = pos.Longitude,
+                    Latitude = LastPin.Latitude,
+                    Longitude = LastPin.Longitude,
                     Nama = NamaEntry.Text
                 };
                 App.LokasiVM.TambahLokasi(lokasi);
@@ -55,8 +56,11 @@ namespace MaritimApp.Views
 
         void MainMap_Tap(object sender, Libs.TapEventArgs e)
         {
+
+            LastPin = e.Position;
+
             //var item = e.Position;
-            var position = e.Position; // Latitude, Longitude
+            /*var position = e.Position; // Latitude, Longitude
             var pin = new Pin
             {
                 Type = PinType.Generic,
@@ -64,7 +68,7 @@ namespace MaritimApp.Views
                 Label = "Lokasi Baru"
             };
             MainMap.Pins.Clear();
-            MainMap.Pins.Add(pin);
+            MainMap.Pins.Add(pin);*/
         }
 	}
 }

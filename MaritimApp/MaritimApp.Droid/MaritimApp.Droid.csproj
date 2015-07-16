@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -16,15 +14,14 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidUseLatestPlatformSdk>
-    </AndroidUseLatestPlatformSdk>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
-    <JavaMaximumHeapSize />
-    <JavaOptions />
-    <NuGetPackageImportStamp>62f84c40</NuGetPackageImportStamp>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <NuGetPackageImportStamp>e00144b5</NuGetPackageImportStamp>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,91 +31,79 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip />
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
-    <BundleAssemblies>False</BundleAssemblies>
-    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
-    <MandroidI18n />
-    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
-    <JavaOptions />
-    <MonoDroidExtraArgs />
+    <JavaMaximumHeapSize>512m</JavaMaximumHeapSize>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <JavaMaximumHeapSize>512m</JavaMaximumHeapSize>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a</AndroidSupportedAbis>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <EnableProguard>true</EnableProguard>
+    <AndroidLinkSkip>WorldWeatherOnlineAPI;Newtonsoft.Json;SQLitePCL.raw;SQLite-net;MaritimApp</AndroidLinkSkip>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FormsViewGroup, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\GooglePlayServicesLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SQLitePCL.raw, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SQLitePCL.raw_basic.0.7.1\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FormsViewGroup, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw, Version=0.7.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\SQLitePCL.raw_basic.0.7.1\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Android.Support.v7.MediaRouter.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Maps, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.Maps.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Maps.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps.Android, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Maps.Android, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.Maps.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Maps.Android.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackgroundService.cs" />
+    <Compile Include="BootReceiver.cs" />
     <Compile Include="Libs\CleanNavRenderer.cs" />
     <Compile Include="Libs\ExtendedMapRenderer.cs" />
     <Compile Include="Libs\PrefixName_Android.cs" />
@@ -130,9 +115,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\drawable-hdpi\Thumbs.db" />
+    <AndroidResource Include="Resources\drawable-mdpi\Thumbs.db" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Thumbs.db" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -254,25 +244,108 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\selector_list.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_control_disabled_holo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_control_focused_holo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_primary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_secondary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_scrubber_track_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_textfield_activated_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_textfield_default_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_textfield_disabled_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_textfield_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\maritimtheme_textfield_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_control_disabled_holo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_control_focused_holo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_primary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_secondary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_scrubber_track_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_textfield_activated_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_textfield_default_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_textfield_disabled_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_textfield_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\maritimtheme_textfield_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_control_disabled_holo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_control_focused_holo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_primary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_secondary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_scrubber_track_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_textfield_activated_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_textfield_default_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_textfield_disabled_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_textfield_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\maritimtheme_textfield_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_control_disabled_holo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_control_focused_holo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_primary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_secondary_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_scrubber_track_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_textfield_activated_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_textfield_default_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_textfield_disabled_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_textfield_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maritimtheme_textfield_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\maritimtheme_edit_text_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\maritimtheme_scrubber_control_selector_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\maritimtheme_scrubber_progress_horizontal_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\maritimtheme_tab_indicator_holo.xml" />
+    <AndroidResource Include="Resources\drawable\actionbar_tab_indicator.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WorldWeatherOnlineAPI\WorldWeatherOnlineAPI.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Project>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</Project>
       <Name>WorldWeatherOnlineAPI</Name>
     </ProjectReference>
     <ProjectReference Include="..\MaritimApp\MaritimApp.csproj">
-      <Project>{9803bd87-1725-47cf-8c54-51f2930cabec}</Project>
+      <Project>{9803BD87-1725-47CF-8C54-51F2930CABEC}</Project>
       <Name>MaritimApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

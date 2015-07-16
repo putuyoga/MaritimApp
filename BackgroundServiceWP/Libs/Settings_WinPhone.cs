@@ -4,13 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-
-[assembly: Dependency(typeof(Settings_WinPhone))]
 
 namespace MaritimApp.WinPhone.Libs
 {
-    public class Settings_WinPhone : MaritimApp.Libs.ISettings
+    public class Settings_WinPhone
     {
         public T GetValues<T>(string key)
         {

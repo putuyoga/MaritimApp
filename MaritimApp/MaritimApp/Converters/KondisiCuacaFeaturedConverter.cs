@@ -9,30 +9,25 @@ namespace MaritimApp.Converters
 {
     public class KondisiCuacaFeaturedConverter : IValueConverter
     {
-
+        private static ImageCuacaConverter imgConverter = new ImageCuacaConverter();
+        private static ImageSource QuestionImage;
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             //Prefix each platform
-            #if __ANDROID__
-            var imagePrefix = "";
-            #endif
-            #if WINDOWS_PHONE
-            var imagePrefix = "Assets/";
-            #endif
 
             var imagePrefix = DependencyService.Get<IPrefixName>().GetPrefixName(String.Empty);
 
             Lokasi selected = (Lokasi)value;
             var terdekat = selected.GetCuacaTerdekat();
             ImageSource source;
+
+            //load up image question
+            QuestionImage = QuestionImage == null ? ImageSource.FromFile(imagePrefix + "Question.png") : QuestionImage;
+            source = QuestionImage;
+
             if(terdekat != null)
             {
-                var imgConverter = new ImageCuacaConverter();
-                source = (ImageSource)imgConverter.Convert(terdekat, null, null, null);
-            }
-            else
-            {
-                source = ImageSource.FromFile(imagePrefix + "Question.png");
+                source = imgConverter.Convert(terdekat, typeof(ImageSource), null, culture) as ImageSource;
             }
             return source;
         }

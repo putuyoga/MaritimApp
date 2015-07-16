@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaritimApp", "MaritimApp\MaritimApp\MaritimApp.csproj", "{9803BD87-1725-47CF-8C54-51F2930CABEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{951D1D31-6B9F-48B3-B463-6381F2E60F71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaritimApp.Droid", "MaritimApp\MaritimApp.Droid\MaritimApp.Droid.csproj", "{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaritimApp.WinPhone", "MaritimApp\MaritimApp.WinPhone\MaritimApp.WinPhone.csproj", "{15B75988-2DBA-44F8-84F7-3B994ED6546B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{52BD0AFE-5860-4FED-95AC-D4241E99335A}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldWeatherOnlineAPI", "WorldWeatherOnlineAPI\WorldWeatherOnlineAPI.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundServiceWP", "BackgroundServiceWP\BackgroundServiceWP.csproj", "{7834A699-26E5-411C-9700-0C6232734F33}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{951D1D31-6B9F-48B3-B463-6381F2E60F71}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{52BD0AFE-5860-4FED-95AC-D4241E99335A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,38 +45,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|ARM.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|x86.ActiveCfg = Release|Any CPU
 		{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
@@ -245,14 +213,46 @@ Global
 		{7834A699-26E5-411C-9700-0C6232734F33}.Release|Mixed Platforms.Build.0 = Release|x86
 		{7834A699-26E5-411C-9700-0C6232734F33}.Release|x86.ActiveCfg = Release|x86
 		{7834A699-26E5-411C-9700-0C6232734F33}.Release|x86.Build.0 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9803BD87-1725-47CF-8C54-51F2930CABEC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0124EB3C-3C0F-4997-9BBC-4F74C810CA8E} = {951D1D31-6B9F-48B3-B463-6381F2E60F71}
 		{15B75988-2DBA-44F8-84F7-3B994ED6546B} = {951D1D31-6B9F-48B3-B463-6381F2E60F71}
 		{67F9D3A8-F71E-4428-913F-C37AE82CDB24} = {52BD0AFE-5860-4FED-95AC-D4241E99335A}
 		{7834A699-26E5-411C-9700-0C6232734F33} = {52BD0AFE-5860-4FED-95AC-D4241E99335A}
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

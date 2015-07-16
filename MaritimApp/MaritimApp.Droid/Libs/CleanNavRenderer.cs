@@ -36,6 +36,7 @@ namespace MaritimApp.Droid.Libs
             actionBar.SetDisplayShowHomeEnabled(false);
             actionBar.SetHomeAsUpIndicator(null);
             actionBar.SetHomeButtonEnabled(false);
+            actionBar.SetDisplayUseLogoEnabled(false);
             actionBar.SetIcon(new ColorDrawable(Color.Transparent.ToAndroid()));
 
         }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{842bba81-bc4a-4383-a8b1-3fb88b5c2213}" Title="MaritimApp.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="MaritimApp.WinPhone author" Description="Sample description" Publisher="MaritimApp.WinPhone" PublisherID="{cb604a6c-11d4-4301-b0e7-6ecf3fbfe915}">
+  <App xmlns="" ProductID="{842bba81-bc4a-4383-a8b1-3fb88b5c2213}" Title="Cuaca Maritim" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="MaritimApp.WinPhone author" Description="Aplikasi yang menyediakan Prakiraan Cuaca Maritim" Publisher="MaritimApp.WinPhone" PublisherID="{cb604a6c-11d4-4301-b0e7-6ecf3fbfe915}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -15,7 +15,7 @@
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
       <ExtendedTask Name="BackgroundTask">
-        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="BackgroundAgent" Source="BackgroundServiceWP" Type="BackgroundServiceWP.BackgroundAgent" />
+        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="BackgroundService" Source="BackgroundServiceWP" Type="BackgroundServiceWP.BackgroundService" />
       </ExtendedTask>
     </Tasks>
     <Tokens>
@@ -24,7 +24,7 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>MaritimApp.WinPhone</Title>
+          <Title>Cuaca Maritim</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>

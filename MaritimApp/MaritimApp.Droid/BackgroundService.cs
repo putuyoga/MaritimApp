@@ -35,7 +35,7 @@ namespace MaritimApp.Droid
             int kondisiCuacaMin = settingKondisiCuaca;
 
             //Set credential api key World Weather Online
-            string apiKey = "adde5021bf1d5fe6ce0d42465c554";
+            string apiKey = "e722f3c6f836c840657708c1972ab";
             WorldWeatherOnlineClient client = new WorldWeatherOnlineClient(apiKey);
 
             //Ambil lokasi dari database dulu
@@ -53,6 +53,9 @@ namespace MaritimApp.Droid
                         Longitude = lokasi.Longitude
                     };
                     var response = await client.RequestAsync(request);
+                    
+                    //kalau ga ada respon (internet dll) - skip
+                    if (response == null) continue;
 
                     foreach (var weather in response.Data.Weather[0].Hourly)
                     {
@@ -66,6 +69,7 @@ namespace MaritimApp.Droid
                         if (praTinggiGel > tinggiGelombangMin || praTinggiGelMaks > tinggiGelombangMin)
                         {
                             Notify(lokasi.Nama, "gelombang @" + waktu + ":00 =" + praTinggiGelMaks + "m", context, intent);
+                            break;
                         }
 
                         //cek jarak pandang
@@ -73,6 +77,7 @@ namespace MaritimApp.Droid
                         if (praJarakPandang < jarakPandangMin)
                         {
                             Notify(lokasi.Nama, "jarak pandang @" + waktu + ":00 = " + praJarakPandang + "km", context, intent);
+                            break;
                         }
 
                         //cek kondisi cuaca
@@ -80,10 +85,12 @@ namespace MaritimApp.Droid
                         if (kondisiCuacaMin == 0 && kodeCuaca > 176)
                         {
                             Notify(lokasi.Nama, "kondisi cuaca kurang baik @" + waktu + ":00", context, intent);
+                            break;
                         }
                         else if (kondisiCuacaMin == 1 && kodeCuaca != 113)
                         {
                             Notify(lokasi.Nama, "kondisi cuaca kurang baik @" + waktu + ":00", context, intent);
+                            break;
                         }
                     }
                 }
@@ -103,12 +110,13 @@ namespace MaritimApp.Droid
             var builder = new NotificationCompat.Builder(context)
                             .SetContentIntent(contentIntent)
                             .SetSmallIcon(Resource.Drawable.Pin)
+                            .SetDefaults(NotificationCompat.DefaultAll)
                             .SetContentTitle(title)
                             .SetContentText(message)
                             .SetStyle(style)
                             .SetWhen(Java.Lang.JavaSystem.CurrentTimeMillis())
-                            .SetAutoCancel(true);
-
+                            .SetAutoCancel(true)
+                            .SetPriority(NotificationCompat.PriorityHigh);
 
             var notification = builder.Build();
 

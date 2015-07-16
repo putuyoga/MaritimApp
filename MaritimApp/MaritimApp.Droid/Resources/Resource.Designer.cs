@@ -741,29 +741,29 @@ namespace MaritimApp.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09004c
-			public const int abc_background_cache_hint_selector_material_dark = 2131296332;
+			// aapt resource value: 0x7f09004e
+			public const int abc_background_cache_hint_selector_material_dark = 2131296334;
 			
-			// aapt resource value: 0x7f09004d
-			public const int abc_background_cache_hint_selector_material_light = 2131296333;
+			// aapt resource value: 0x7f09004f
+			public const int abc_background_cache_hint_selector_material_light = 2131296335;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_input_method_navigation_guard = 2131296256;
 			
-			// aapt resource value: 0x7f09004e
-			public const int abc_primary_text_disable_only_material_dark = 2131296334;
-			
-			// aapt resource value: 0x7f09004f
-			public const int abc_primary_text_disable_only_material_light = 2131296335;
-			
 			// aapt resource value: 0x7f090050
-			public const int abc_primary_text_material_dark = 2131296336;
+			public const int abc_primary_text_disable_only_material_dark = 2131296336;
 			
 			// aapt resource value: 0x7f090051
-			public const int abc_primary_text_material_light = 2131296337;
+			public const int abc_primary_text_disable_only_material_light = 2131296337;
 			
 			// aapt resource value: 0x7f090052
-			public const int abc_search_url_text = 2131296338;
+			public const int abc_primary_text_material_dark = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int abc_primary_text_material_light = 2131296339;
+			
+			// aapt resource value: 0x7f090054
+			public const int abc_search_url_text = 2131296340;
 			
 			// aapt resource value: 0x7f090001
 			public const int abc_search_url_text_normal = 2131296257;
@@ -774,11 +774,11 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090003
 			public const int abc_search_url_text_selected = 2131296259;
 			
-			// aapt resource value: 0x7f090053
-			public const int abc_secondary_text_material_dark = 2131296339;
+			// aapt resource value: 0x7f090055
+			public const int abc_secondary_text_material_dark = 2131296341;
 			
-			// aapt resource value: 0x7f090054
-			public const int abc_secondary_text_material_light = 2131296340;
+			// aapt resource value: 0x7f090056
+			public const int abc_secondary_text_material_light = 2131296342;
 			
 			// aapt resource value: 0x7f090004
 			public const int accent_material_dark = 2131296260;
@@ -798,8 +798,8 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090009
 			public const int background_material_light = 2131296265;
 			
-			// aapt resource value: 0x7f09004a
-			public const int black = 2131296330;
+			// aapt resource value: 0x7f09004b
+			public const int black = 2131296331;
 			
 			// aapt resource value: 0x7f09000a
 			public const int bright_foreground_disabled_material_dark = 2131296266;
@@ -855,11 +855,11 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090036
 			public const int common_signin_btn_light_text_pressed = 2131296310;
 			
-			// aapt resource value: 0x7f090055
-			public const int common_signin_btn_text_dark = 2131296341;
+			// aapt resource value: 0x7f090057
+			public const int common_signin_btn_text_dark = 2131296343;
 			
-			// aapt resource value: 0x7f090056
-			public const int common_signin_btn_text_light = 2131296342;
+			// aapt resource value: 0x7f090058
+			public const int common_signin_btn_text_light = 2131296344;
 			
 			// aapt resource value: 0x7f090012
 			public const int dim_foreground_disabled_material_dark = 2131296274;
@@ -873,8 +873,8 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090015
 			public const int dim_foreground_material_light = 2131296277;
 			
-			// aapt resource value: 0x7f09004b
-			public const int gray = 2131296331;
+			// aapt resource value: 0x7f09004c
+			public const int gray = 2131296332;
 			
 			// aapt resource value: 0x7f090016
 			public const int highlighted_text_material_dark = 2131296278;
@@ -896,6 +896,9 @@ namespace MaritimApp.Droid
 			
 			// aapt resource value: 0x7f090048
 			public const int main_color = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int main_dark_color = 2131296329;
 			
 			// aapt resource value: 0x7f09001c
 			public const int material_blue_grey_800 = 2131296284;
@@ -960,6 +963,9 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090030
 			public const int switch_thumb_normal_material_light = 2131296304;
 			
+			// aapt resource value: 0x7f09004d
+			public const int transparent = 2131296333;
+			
 			// aapt resource value: 0x7f090040
 			public const int wallet_bright_foreground_disabled_holo_light = 2131296320;
 			
@@ -999,14 +1005,14 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f090047
 			public const int wallet_link_text_light = 2131296327;
 			
-			// aapt resource value: 0x7f090057
-			public const int wallet_primary_text_holo_light = 2131296343;
+			// aapt resource value: 0x7f090059
+			public const int wallet_primary_text_holo_light = 2131296345;
 			
-			// aapt resource value: 0x7f090058
-			public const int wallet_secondary_text_holo_dark = 2131296344;
+			// aapt resource value: 0x7f09005a
+			public const int wallet_secondary_text_holo_dark = 2131296346;
 			
-			// aapt resource value: 0x7f090049
-			public const int white = 2131296329;
+			// aapt resource value: 0x7f09004a
+			public const int white = 2131296330;
 			
 			static Color()
 			{
@@ -1317,478 +1323,550 @@ namespace MaritimApp.Droid
 			public const int abc_textfield_search_material = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int AddButton = 2130837555;
+			public const int actionbar_tab_indicator = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int common_full_open_on_phone = 2130837556;
+			public const int AddButton = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int common_ic_googleplayservices = 2130837557;
+			public const int common_full_open_on_phone = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int common_signin_btn_icon_dark = 2130837558;
+			public const int common_ic_googleplayservices = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int common_signin_btn_icon_disabled_dark = 2130837559;
+			public const int common_signin_btn_icon_dark = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int common_signin_btn_icon_disabled_focus_dark = 2130837560;
+			public const int common_signin_btn_icon_disabled_dark = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int common_signin_btn_icon_disabled_focus_light = 2130837561;
+			public const int common_signin_btn_icon_disabled_focus_dark = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int common_signin_btn_icon_disabled_light = 2130837562;
+			public const int common_signin_btn_icon_disabled_focus_light = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int common_signin_btn_icon_focus_dark = 2130837563;
+			public const int common_signin_btn_icon_disabled_light = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int common_signin_btn_icon_focus_light = 2130837564;
+			public const int common_signin_btn_icon_focus_dark = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int common_signin_btn_icon_light = 2130837565;
+			public const int common_signin_btn_icon_focus_light = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int common_signin_btn_icon_normal_dark = 2130837566;
+			public const int common_signin_btn_icon_light = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int common_signin_btn_icon_normal_light = 2130837567;
+			public const int common_signin_btn_icon_normal_dark = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int common_signin_btn_icon_pressed_dark = 2130837568;
+			public const int common_signin_btn_icon_normal_light = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int common_signin_btn_icon_pressed_light = 2130837569;
+			public const int common_signin_btn_icon_pressed_dark = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int common_signin_btn_text_dark = 2130837570;
+			public const int common_signin_btn_icon_pressed_light = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int common_signin_btn_text_disabled_dark = 2130837571;
+			public const int common_signin_btn_text_dark = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int common_signin_btn_text_disabled_focus_dark = 2130837572;
+			public const int common_signin_btn_text_disabled_dark = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int common_signin_btn_text_disabled_focus_light = 2130837573;
+			public const int common_signin_btn_text_disabled_focus_dark = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int common_signin_btn_text_disabled_light = 2130837574;
+			public const int common_signin_btn_text_disabled_focus_light = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int common_signin_btn_text_focus_dark = 2130837575;
+			public const int common_signin_btn_text_disabled_light = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int common_signin_btn_text_focus_light = 2130837576;
+			public const int common_signin_btn_text_focus_dark = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int common_signin_btn_text_light = 2130837577;
+			public const int common_signin_btn_text_focus_light = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int common_signin_btn_text_normal_dark = 2130837578;
+			public const int common_signin_btn_text_light = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int common_signin_btn_text_normal_light = 2130837579;
+			public const int common_signin_btn_text_normal_dark = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int common_signin_btn_text_pressed_dark = 2130837580;
+			public const int common_signin_btn_text_normal_light = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int common_signin_btn_text_pressed_light = 2130837581;
+			public const int common_signin_btn_text_pressed_dark = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int GelombangIcons_1 = 2130837582;
+			public const int common_signin_btn_text_pressed_light = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int GelombangIcons_2 = 2130837583;
+			public const int GelombangIcons_1 = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int GelombangIcons_3 = 2130837584;
+			public const int GelombangIcons_2 = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ic_plusone_medium_off_client = 2130837585;
+			public const int GelombangIcons_3 = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_plusone_small_off_client = 2130837586;
+			public const int ic_plusone_medium_off_client = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_plusone_standard_off_client = 2130837587;
+			public const int ic_plusone_small_off_client = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_plusone_tall_off_client = 2130837588;
+			public const int ic_plusone_standard_off_client = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int icon = 2130837589;
+			public const int ic_plusone_tall_off_client = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int mr_ic_audio_vol = 2130837590;
+			public const int icon = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int mr_ic_media_route_connecting_holo_dark = 2130837591;
+			public const int maritimtheme_edit_text_holo_light = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int mr_ic_media_route_connecting_holo_light = 2130837592;
+			public const int maritimtheme_scrubber_control_disabled_holo = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int mr_ic_media_route_disabled_holo_dark = 2130837593;
+			public const int maritimtheme_scrubber_control_focused_holo = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int mr_ic_media_route_disabled_holo_light = 2130837594;
+			public const int maritimtheme_scrubber_control_normal_holo = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int mr_ic_media_route_holo_dark = 2130837595;
+			public const int maritimtheme_scrubber_control_pressed_holo = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int mr_ic_media_route_holo_light = 2130837596;
+			public const int maritimtheme_scrubber_control_selector_holo_light = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int mr_ic_media_route_off_holo_dark = 2130837597;
+			public const int maritimtheme_scrubber_primary_holo = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int mr_ic_media_route_off_holo_light = 2130837598;
+			public const int maritimtheme_scrubber_progress_horizontal_holo_light = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int mr_ic_media_route_on_0_holo_dark = 2130837599;
+			public const int maritimtheme_scrubber_secondary_holo = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int mr_ic_media_route_on_0_holo_light = 2130837600;
+			public const int maritimtheme_scrubber_track_holo_light = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int mr_ic_media_route_on_1_holo_dark = 2130837601;
+			public const int maritimtheme_tab_indicator_holo = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int mr_ic_media_route_on_1_holo_light = 2130837602;
+			public const int maritimtheme_tab_selected_focused_holo = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int mr_ic_media_route_on_2_holo_dark = 2130837603;
+			public const int maritimtheme_tab_selected_holo = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int mr_ic_media_route_on_2_holo_light = 2130837604;
+			public const int maritimtheme_tab_selected_pressed_holo = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int mr_ic_media_route_on_holo_dark = 2130837605;
+			public const int maritimtheme_tab_unselected_focused_holo = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int mr_ic_media_route_on_holo_light = 2130837606;
+			public const int maritimtheme_tab_unselected_holo = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int Pin = 2130837607;
+			public const int maritimtheme_tab_unselected_pressed_holo = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int powered_by_google_dark = 2130837608;
+			public const int maritimtheme_textfield_activated_holo_light = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int powered_by_google_light = 2130837609;
+			public const int maritimtheme_textfield_default_holo_light = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int Question = 2130837610;
+			public const int maritimtheme_textfield_disabled_focused_holo_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int selector_bg_button = 2130837611;
+			public const int maritimtheme_textfield_disabled_holo_light = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int selector_bg_entry = 2130837612;
+			public const int maritimtheme_textfield_focused_holo_light = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int selector_fg_button = 2130837613;
+			public const int mr_ic_audio_vol = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int selector_fg_entry = 2130837614;
+			public const int mr_ic_media_route_connecting_holo_dark = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int WeatherIcons_day_113 = 2130837615;
+			public const int mr_ic_media_route_connecting_holo_light = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int WeatherIcons_day_116 = 2130837616;
+			public const int mr_ic_media_route_disabled_holo_dark = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int WeatherIcons_day_119 = 2130837617;
+			public const int mr_ic_media_route_disabled_holo_light = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int WeatherIcons_day_122 = 2130837618;
+			public const int mr_ic_media_route_holo_dark = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int WeatherIcons_day_143 = 2130837619;
+			public const int mr_ic_media_route_holo_light = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int WeatherIcons_day_176 = 2130837620;
+			public const int mr_ic_media_route_off_holo_dark = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int WeatherIcons_day_179 = 2130837621;
+			public const int mr_ic_media_route_off_holo_light = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int WeatherIcons_day_182 = 2130837622;
+			public const int mr_ic_media_route_on_0_holo_dark = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int WeatherIcons_day_185 = 2130837623;
+			public const int mr_ic_media_route_on_0_holo_light = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int WeatherIcons_day_200 = 2130837624;
+			public const int mr_ic_media_route_on_1_holo_dark = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int WeatherIcons_day_227 = 2130837625;
+			public const int mr_ic_media_route_on_1_holo_light = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int WeatherIcons_day_230 = 2130837626;
+			public const int mr_ic_media_route_on_2_holo_dark = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int WeatherIcons_day_248 = 2130837627;
+			public const int mr_ic_media_route_on_2_holo_light = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int WeatherIcons_day_260 = 2130837628;
+			public const int mr_ic_media_route_on_holo_dark = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int WeatherIcons_day_263 = 2130837629;
+			public const int mr_ic_media_route_on_holo_light = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int WeatherIcons_day_266 = 2130837630;
+			public const int Pin = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int WeatherIcons_day_281 = 2130837631;
+			public const int powered_by_google_dark = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int WeatherIcons_day_284 = 2130837632;
+			public const int powered_by_google_light = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int WeatherIcons_day_293 = 2130837633;
+			public const int Question = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int WeatherIcons_day_296 = 2130837634;
+			public const int selector_bg_button = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int WeatherIcons_day_299 = 2130837635;
+			public const int selector_bg_entry = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int WeatherIcons_day_302 = 2130837636;
+			public const int selector_fg_button = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int WeatherIcons_day_305 = 2130837637;
+			public const int selector_fg_entry = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int WeatherIcons_day_308 = 2130837638;
+			public const int selector_list = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int WeatherIcons_day_311 = 2130837639;
+			public const int WeatherIcons_day_113 = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int WeatherIcons_day_314 = 2130837640;
+			public const int WeatherIcons_day_116 = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int WeatherIcons_day_317 = 2130837641;
+			public const int WeatherIcons_day_119 = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int WeatherIcons_day_320 = 2130837642;
+			public const int WeatherIcons_day_122 = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int WeatherIcons_day_323 = 2130837643;
+			public const int WeatherIcons_day_143 = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int WeatherIcons_day_326 = 2130837644;
+			public const int WeatherIcons_day_176 = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int WeatherIcons_day_329 = 2130837645;
+			public const int WeatherIcons_day_179 = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int WeatherIcons_day_332 = 2130837646;
+			public const int WeatherIcons_day_182 = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int WeatherIcons_day_335 = 2130837647;
+			public const int WeatherIcons_day_185 = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int WeatherIcons_day_338 = 2130837648;
+			public const int WeatherIcons_day_200 = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int WeatherIcons_day_350 = 2130837649;
+			public const int WeatherIcons_day_227 = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int WeatherIcons_day_353 = 2130837650;
+			public const int WeatherIcons_day_230 = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int WeatherIcons_day_356 = 2130837651;
+			public const int WeatherIcons_day_248 = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int WeatherIcons_day_359 = 2130837652;
+			public const int WeatherIcons_day_260 = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int WeatherIcons_day_362 = 2130837653;
+			public const int WeatherIcons_day_263 = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int WeatherIcons_day_365 = 2130837654;
+			public const int WeatherIcons_day_266 = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int WeatherIcons_day_368 = 2130837655;
+			public const int WeatherIcons_day_281 = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int WeatherIcons_day_371 = 2130837656;
+			public const int WeatherIcons_day_284 = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int WeatherIcons_day_374 = 2130837657;
+			public const int WeatherIcons_day_293 = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int WeatherIcons_day_377 = 2130837658;
+			public const int WeatherIcons_day_296 = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int WeatherIcons_day_386 = 2130837659;
+			public const int WeatherIcons_day_299 = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int WeatherIcons_day_389 = 2130837660;
+			public const int WeatherIcons_day_302 = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int WeatherIcons_day_392 = 2130837661;
+			public const int WeatherIcons_day_305 = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int WeatherIcons_day_395 = 2130837662;
+			public const int WeatherIcons_day_308 = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int WeatherIcons_night_113 = 2130837663;
+			public const int WeatherIcons_day_311 = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int WeatherIcons_night_116 = 2130837664;
+			public const int WeatherIcons_day_314 = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int WeatherIcons_night_119 = 2130837665;
+			public const int WeatherIcons_day_317 = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int WeatherIcons_night_122 = 2130837666;
+			public const int WeatherIcons_day_320 = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int WeatherIcons_night_143 = 2130837667;
+			public const int WeatherIcons_day_323 = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int WeatherIcons_night_176 = 2130837668;
+			public const int WeatherIcons_day_326 = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int WeatherIcons_night_179 = 2130837669;
+			public const int WeatherIcons_day_329 = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int WeatherIcons_night_182 = 2130837670;
+			public const int WeatherIcons_day_332 = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int WeatherIcons_night_185 = 2130837671;
+			public const int WeatherIcons_day_335 = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int WeatherIcons_night_200 = 2130837672;
+			public const int WeatherIcons_day_338 = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int WeatherIcons_night_227 = 2130837673;
+			public const int WeatherIcons_day_350 = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int WeatherIcons_night_230 = 2130837674;
+			public const int WeatherIcons_day_353 = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int WeatherIcons_night_248 = 2130837675;
+			public const int WeatherIcons_day_356 = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int WeatherIcons_night_260 = 2130837676;
+			public const int WeatherIcons_day_359 = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int WeatherIcons_night_263 = 2130837677;
+			public const int WeatherIcons_day_362 = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int WeatherIcons_night_266 = 2130837678;
+			public const int WeatherIcons_day_365 = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int WeatherIcons_night_281 = 2130837679;
+			public const int WeatherIcons_day_368 = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int WeatherIcons_night_284 = 2130837680;
+			public const int WeatherIcons_day_371 = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int WeatherIcons_night_293 = 2130837681;
+			public const int WeatherIcons_day_374 = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int WeatherIcons_night_296 = 2130837682;
+			public const int WeatherIcons_day_377 = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int WeatherIcons_night_299 = 2130837683;
+			public const int WeatherIcons_day_386 = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int WeatherIcons_night_302 = 2130837684;
+			public const int WeatherIcons_day_389 = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int WeatherIcons_night_305 = 2130837685;
+			public const int WeatherIcons_day_392 = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int WeatherIcons_night_308 = 2130837686;
+			public const int WeatherIcons_day_395 = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int WeatherIcons_night_311 = 2130837687;
+			public const int WeatherIcons_night_113 = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int WeatherIcons_night_314 = 2130837688;
+			public const int WeatherIcons_night_116 = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int WeatherIcons_night_317 = 2130837689;
+			public const int WeatherIcons_night_119 = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int WeatherIcons_night_320 = 2130837690;
+			public const int WeatherIcons_night_122 = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int WeatherIcons_night_323 = 2130837691;
+			public const int WeatherIcons_night_143 = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int WeatherIcons_night_326 = 2130837692;
+			public const int WeatherIcons_night_176 = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int WeatherIcons_night_329 = 2130837693;
+			public const int WeatherIcons_night_179 = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int WeatherIcons_night_332 = 2130837694;
+			public const int WeatherIcons_night_182 = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int WeatherIcons_night_335 = 2130837695;
+			public const int WeatherIcons_night_185 = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int WeatherIcons_night_338 = 2130837696;
+			public const int WeatherIcons_night_200 = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int WeatherIcons_night_350 = 2130837697;
+			public const int WeatherIcons_night_227 = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int WeatherIcons_night_353 = 2130837698;
+			public const int WeatherIcons_night_230 = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int WeatherIcons_night_356 = 2130837699;
+			public const int WeatherIcons_night_248 = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int WeatherIcons_night_359 = 2130837700;
+			public const int WeatherIcons_night_260 = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int WeatherIcons_night_362 = 2130837701;
+			public const int WeatherIcons_night_263 = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int WeatherIcons_night_365 = 2130837702;
+			public const int WeatherIcons_night_266 = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int WeatherIcons_night_368 = 2130837703;
+			public const int WeatherIcons_night_281 = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int WeatherIcons_night_371 = 2130837704;
+			public const int WeatherIcons_night_284 = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int WeatherIcons_night_374 = 2130837705;
+			public const int WeatherIcons_night_293 = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int WeatherIcons_night_377 = 2130837706;
+			public const int WeatherIcons_night_296 = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int WeatherIcons_night_386 = 2130837707;
+			public const int WeatherIcons_night_299 = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int WeatherIcons_night_389 = 2130837708;
+			public const int WeatherIcons_night_302 = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int WeatherIcons_night_392 = 2130837709;
+			public const int WeatherIcons_night_305 = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int WindIcons_1 = 2130837710;
+			public const int WeatherIcons_night_308 = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int WindIcons_2 = 2130837711;
+			public const int WeatherIcons_night_311 = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int WindIcons_3 = 2130837712;
+			public const int WeatherIcons_night_314 = 2130837712;
+			
+			// aapt resource value: 0x7f0200d1
+			public const int WeatherIcons_night_317 = 2130837713;
+			
+			// aapt resource value: 0x7f0200d2
+			public const int WeatherIcons_night_320 = 2130837714;
+			
+			// aapt resource value: 0x7f0200d3
+			public const int WeatherIcons_night_323 = 2130837715;
+			
+			// aapt resource value: 0x7f0200d4
+			public const int WeatherIcons_night_326 = 2130837716;
+			
+			// aapt resource value: 0x7f0200d5
+			public const int WeatherIcons_night_329 = 2130837717;
+			
+			// aapt resource value: 0x7f0200d6
+			public const int WeatherIcons_night_332 = 2130837718;
+			
+			// aapt resource value: 0x7f0200d7
+			public const int WeatherIcons_night_335 = 2130837719;
+			
+			// aapt resource value: 0x7f0200d8
+			public const int WeatherIcons_night_338 = 2130837720;
+			
+			// aapt resource value: 0x7f0200d9
+			public const int WeatherIcons_night_350 = 2130837721;
+			
+			// aapt resource value: 0x7f0200da
+			public const int WeatherIcons_night_353 = 2130837722;
+			
+			// aapt resource value: 0x7f0200db
+			public const int WeatherIcons_night_356 = 2130837723;
+			
+			// aapt resource value: 0x7f0200dc
+			public const int WeatherIcons_night_359 = 2130837724;
+			
+			// aapt resource value: 0x7f0200dd
+			public const int WeatherIcons_night_362 = 2130837725;
+			
+			// aapt resource value: 0x7f0200de
+			public const int WeatherIcons_night_365 = 2130837726;
+			
+			// aapt resource value: 0x7f0200df
+			public const int WeatherIcons_night_368 = 2130837727;
+			
+			// aapt resource value: 0x7f0200e0
+			public const int WeatherIcons_night_371 = 2130837728;
+			
+			// aapt resource value: 0x7f0200e1
+			public const int WeatherIcons_night_374 = 2130837729;
+			
+			// aapt resource value: 0x7f0200e2
+			public const int WeatherIcons_night_377 = 2130837730;
+			
+			// aapt resource value: 0x7f0200e3
+			public const int WeatherIcons_night_386 = 2130837731;
+			
+			// aapt resource value: 0x7f0200e4
+			public const int WeatherIcons_night_389 = 2130837732;
+			
+			// aapt resource value: 0x7f0200e5
+			public const int WeatherIcons_night_392 = 2130837733;
+			
+			// aapt resource value: 0x7f0200e6
+			public const int WindIcons_1 = 2130837734;
+			
+			// aapt resource value: 0x7f0200e7
+			public const int WindIcons_2 = 2130837735;
+			
+			// aapt resource value: 0x7f0200e8
+			public const int WindIcons_3 = 2130837736;
 			
 			static Drawable()
 			{
@@ -2738,8 +2816,8 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f070064
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131165284;
 			
-			// aapt resource value: 0x7f0700f5
-			public const int MaritimActionBarStyle = 2131165429;
+			// aapt resource value: 0x7f0700f6
+			public const int MaritimActionBarStyle = 2131165430;
 			
 			// aapt resource value: 0x7f0700f8
 			public const int MaritimButtonStyle = 2131165432;
@@ -2750,8 +2828,14 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f0700f4
 			public const int MaritimTheme = 2131165428;
 			
-			// aapt resource value: 0x7f0700f7
-			public const int MaritimTitleTextStyle = 2131165431;
+			// aapt resource value: 0x7f0700fa
+			public const int MaritimTitleTextStyle = 2131165434;
+			
+			// aapt resource value: 0x7f0700f5
+			public const int MyActionBarTabText = 2131165429;
+			
+			// aapt resource value: 0x7f0700fc
+			public const int MyActionBarTabs = 2131165436;
 			
 			// aapt resource value: 0x7f070065
 			public const int Platform_AppCompat = 2131165285;
@@ -2765,8 +2849,8 @@ namespace MaritimApp.Droid
 			// aapt resource value: 0x7f070068
 			public const int Platform_AppCompat_Light_Dialog = 2131165288;
 			
-			// aapt resource value: 0x7f0700f6
-			public const int PopupMenuTextView = 2131165430;
+			// aapt resource value: 0x7f0700f7
+			public const int PopupMenuTextView = 2131165431;
 			
 			// aapt resource value: 0x7f070069
 			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131165289;
@@ -2803,6 +2887,9 @@ namespace MaritimApp.Droid
 			
 			// aapt resource value: 0x7f070074
 			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131165300;
+			
+			// aapt resource value: 0x7f0700fb
+			public const int SeekBarMaritimTheme = 2131165435;
 			
 			// aapt resource value: 0x7f070075
 			public const int TextAppearance_AppCompat = 2131165301;

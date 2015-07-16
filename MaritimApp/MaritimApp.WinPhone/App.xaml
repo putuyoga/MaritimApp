@@ -11,6 +11,8 @@
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:MaritimApp.WinPhone" x:Key="LocalizedStrings"/>
         <Color x:Key="MainColor">#3c5e7b</Color>
+        <Color x:Key="DarkMainColor">#14334e</Color>
+        
         <SolidColorBrush x:Key="MainColorBrush" Color="{StaticResource MainColor}" />
         <ControlTemplate x:Key="PivotTemplate" TargetType="phone:Pivot">
             <Grid HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">

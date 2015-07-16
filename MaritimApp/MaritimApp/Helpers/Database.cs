@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using MaritimApp.Models;
-using SQLite;
 using Xamarin.Forms;
 using MaritimApp.Libs;
+using SQLite;
 
 namespace MaritimApp.Helpers
 {
@@ -54,6 +54,20 @@ namespace MaritimApp.Helpers
             lock (locker)
             {
                 database.Delete<T>(item);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="item"></param>
+        public void Delete(Lokasi item)
+        {
+            lock (locker)
+            {
+                database.Delete<Lokasi>(item.ID);
+                database.Execute("vacuum;");
             }
         }
 

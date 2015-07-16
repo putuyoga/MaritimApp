@@ -10,14 +10,14 @@
             <Style x:Key="titleDetail" TargetType="Label">
                 <Setter Property="FontSize">
                     <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                        <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="11" />
                     </Setter.Value>
                 </Setter>
             </Style>
             <Style x:Key="valueDetail" TargetType="Label">
                 <Setter Property="FontSize">
                     <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                        <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="16" />
                     </Setter.Value>
                 </Setter>
                 <Setter Property="FontAttributes" Value="Bold" />
@@ -27,6 +27,8 @@
             <Converters:ImageAnginConverter x:Key="ImageAnginConverter" />
             <Converters:ImageCuacaConverter x:Key="ImageCuacaConverter" />
             <Converters:KondisiCuacaConverter x:Key="KondisiCuacaConverter" />
+            <Converters:DateTimeToOpacityConverter x:Key="DateTimeToOpacityConverter" />
+            <Converters:ValToPeringatanConverter x:Key="ValToPeringatanConverter" />
             <Converters:TimeConverter x:Key="TimeConverter" />
         </ResourceDictionary>
     </TabbedPage.Resources>
@@ -37,7 +39,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <StackLayout Orientation="Vertical" Padding="12,6" Grid.Row="0">
+                <StackLayout Orientation="Vertical" Padding="12,6" Grid.Row="0" Opacity="{Binding Waktu, Converter={StaticResource DateTimeToOpacityConverter}}">
                     <!-- Infographic -->
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -52,9 +54,9 @@
                                 </Grid.HeightRequest>
                                 <Image Aspect="AspectFill"  Source="{Binding Converter={StaticResource ImageCuacaConverter}}" HorizontalOptions="Center" VerticalOptions="Center" />
                             </Grid>
-                            <Label Text="{Binding KodeCuaca, Converter={StaticResource KondisiCuacaConverter}}">
+                            <Label FormattedText="{Binding Converter={StaticResource ValToPeringatanConverter}, ConverterParameter='KondisiCuaca'}">
                                 <Label.FontSize>
-                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="11" />
                                 </Label.FontSize>
                             </Label>
                         </StackLayout>
@@ -65,9 +67,9 @@
                                 </Grid.HeightRequest>
                                 <Image Aspect="AspectFill" Source="{Binding TinggiGelombang, Converter={StaticResource ImageGelombangConverter}}" HorizontalOptions="Center" VerticalOptions="Center"  />
                             </Grid>
-                            <Label Text="{Binding TinggiGelombang, StringFormat='{0:F1} meter'}">
+                            <Label FormattedText="{Binding Converter={StaticResource ValToPeringatanConverter}, ConverterParameter='TinggiGelombang'}">
                                 <Label.FontSize>
-                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="11" />
                                 </Label.FontSize>
                             </Label>
                         </StackLayout>
@@ -80,30 +82,30 @@
                             </Grid>
                             <Label Text="{Binding KecepatanAngin, StringFormat='{0} km/jam'}">
                                 <Label.FontSize>
-                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="12" />
+                                    <OnPlatform x:TypeArguments="x:Double" WinPhone="18" Android="11" />
                                 </Label.FontSize>
                             </Label>
                         </StackLayout>
                     </Grid>
 
                     <!-- Info -->
-                    <StackLayout Orientation="Horizontal" Padding="0,24">
+                    <StackLayout Orientation="Horizontal" Padding="0,24" Opacity="{Binding Waktu, Converter={StaticResource DateTimeToOpacityConverter}}">
                         <StackLayout.Padding>
                             <OnPlatform x:TypeArguments="Thickness" WinPhone="0,24" Android="0,12" />
                         </StackLayout.Padding>
                         <Label x:Name="namaLokasi"  Text="{Binding Nama}">
                             <Label.FontSize>
-                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="15" />
                             </Label.FontSize>
                         </Label>
                         <Label Text="{Binding Waktu, Converter={StaticResource TimeConverter}}" FontAttributes="Bold">
                             <Label.FontSize>
-                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="18" />
+                                <OnPlatform x:TypeArguments="x:Double" WinPhone="28" Android="15" />
                             </Label.FontSize>
                         </Label>
                     </StackLayout>
                     <!-- Detail -->
-                    <Grid>
+                    <Grid Opacity="{Binding Waktu, Converter={StaticResource DateTimeToOpacityConverter}}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
@@ -115,7 +117,7 @@
                         </Grid.RowDefinitions>
                         <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
                             <Label Text="Tinggi Gelombang Maks" Style="{StaticResource titleDetail}" />
-                            <Label Text="{Binding TinggiGelombangMaks, StringFormat='{0:F1} meter'}" Style="{StaticResource valueDetail}"/>
+                            <Label FormattedText="{Binding Converter={StaticResource ValToPeringatanConverter}, ConverterParameter='TinggiGelombangMaks'}" Style="{StaticResource valueDetail}"/>
                         </StackLayout>
                         <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0">
                             <Label Text="Arah Gelombang" Style="{StaticResource titleDetail}" />
@@ -127,7 +129,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
                             <Label Text="Jarak Pandang" Style="{StaticResource titleDetail}" />
-                            <Label Text="{Binding JarakPandang, StringFormat='{0} km'}" Style="{StaticResource valueDetail}"/>
+                            <Label FormattedText="{Binding Converter={StaticResource ValToPeringatanConverter}, ConverterParameter='JarakPandang'}" Style="{StaticResource valueDetail}"/>
                         </StackLayout>
                         <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1">
                             <Label Text="Temperatur Air" Style="{StaticResource titleDetail}" />
@@ -148,11 +150,24 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Text="Sebelumnya" Grid.Column="0"  Clicked="Up_Clicked"/>
-                        <Button Text="Selanjutnya" Grid.Column="1" Clicked="Down_Clicked"/>
+                        <Button x:Name="prevButton" Text="3 jam lalu" Grid.Column="0"  Clicked="Up_Clicked"/>
+                        <Button x:Name="nextButton" Text="3 jam kedepan" Grid.Column="1" Clicked="Down_Clicked"/>
                     </Grid>
                 </StackLayout>
                 <ActivityIndicator x:Name="loadingIndicator" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#BBFFFFFF" />
+                <Grid x:Name="ErrorGrid" BackgroundColor="#FFFFFF" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowSpan="2">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                  </Grid.RowDefinitions>
+                  <StackLayout>
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness" WinPhone="12,24" Android="12,12" />
+                    </StackLayout.Padding>
+                    <Label Text="Gagal mendapatkan data dari layanan, jadi tidak ada data prakiraan cuaca yang ditampilkan." Grid.Row="0" VerticalOptions="CenterAndExpand"/>
+                  </StackLayout>
+                  <Button x:Name="reloadButton" Grid.Row="1" Text="Coba Lagi" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Clicked="Reload_Clicked"/>
+                </Grid>
             </Grid>
         </ContentPage>
         <ContentPage Title="lokasi peta">
